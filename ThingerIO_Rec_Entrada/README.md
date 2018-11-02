@@ -26,7 +26,9 @@ Entonces, dentro de la función de **setup** puede colocar un recurso llamado **
 
 
 `thing["led"] << [](pson& in){`
+
 `  digitalWrite(10, in ? HIGH : LOW);`
+
 `};`
 
 ### Modificar una posición de servo
