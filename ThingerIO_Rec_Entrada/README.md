@@ -25,20 +25,21 @@ Este tipo de recursos solo requiere un estado de encendido / apagado para que pu
 Entonces, dentro de la función de **setup** puede colocar un recurso llamado **led** (pero puede usar cualquier otro nombre), de tipo de entrada (usando el operador **<<**), que toma una referencia a un parámetro **pson**. Este ejemplo activará / desactivará el pin digital 10 utilizando un operador ternario sobre el parámetro **in**.
 
 
-`thing["led"] << [](pson& in){`
-
-`  digitalWrite(10, in ? HIGH : LOW);`
-
-`};`
+```c
+thing["led"] << [](pson& in){
+	digitalWrite(10, in ? HIGH : LOW);
+};
+```
 
 ### Modificar una posición de servo
 
 La modificación de una posición de servo es bastante similar a encender / apagar un led. En este caso, sin embargo, es necesario usar un valor entero. Como el tipo **pson** puede contener múltiples tipos de datos, podemos usar el tipo pson como un valor entero.
 
-`thing["servo"] << [](pson& in){`
-`    myServo.write(in);`
-`};`
-
+```c
+thing["servo"] << [](pson& in){
+    myServo.write(in);
+};
+```
 ### Actualizar variables del programa
 
 Puede usar los recursos de entrada también para actualizar las variables del programa, para que pueda cambiar el comportamiento de su dispositivo de forma dinámica. Esto es bastante útil en algunas situaciones en las que desea deshabilitar temporalmente una alarma, cambiar los intervalos de informe, actualizar un valor de histéresis, y así sucesivamente. De esta manera, puede definir recursos adicionales para cambiar sus variables.
