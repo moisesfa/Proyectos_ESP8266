@@ -1,14 +1,9 @@
-# Recursos de entrada con ESP8266 en Thingerio.
+# Proyectos con RECURSOS DE ENTRADA de Thingerio.
 
-La placa de desarrollo utilizada es la Adafruit Feather HUZZAH con ESP8266.  
-Como IDE uso PlatformIO que es un ecosistema open source para desarrollos IoT. 
+La placa de desarrollo utilizada es la Adafruit Feather Huzzah con **ESP8266**.  
+Como IDE uso **PlatformIO** que es un ecosistema open source para desarrollos IoT. 
 
-Toda esta información se encuentra disponible en la pagina de Thinger.io. Yo tan solo la he traducido para poder entenderla mejor.
-
-[Fuente de información de los recursos de entrada](http://docs.thinger.io/arduino/#coding-adding-resources-input-resources)
-
-
-## Recursos de entrada en Thinger.io
+## Recursos de entrada de Thinger.io
 
 Si necesita controlar o activar su dispositivo de IoT, es necesario definir un recurso de entrada. De esta forma, un recurso de entrada es cualquier cosa que pueda proporcionar información a su dispositivo. Por ejemplo, puede ser un recurso para encender y apagar una luz o un relé, cambiar una posición de servo, ajustar un parámetro de dispositivo, etc.
 
@@ -44,19 +39,23 @@ thing["servo"] << [](pson& in){
 
 Puede usar los recursos de entrada también para actualizar las variables del programa, para que pueda cambiar el comportamiento de su dispositivo de forma dinámica. Esto es bastante útil en algunas situaciones en las que desea deshabilitar temporalmente una alarma, cambiar los intervalos de informe, actualizar un valor de histéresis, y así sucesivamente. De esta manera, puede definir recursos adicionales para cambiar sus variables.
 
-`float hysteresis = 0; // defined as a global variable`
-`thing["hysteresis"] << [](pson& in){`
-`    hysteresis = in;`
-`};`
+```c
+float hysteresis = 0; 	// defined as a global variable
+thing["hysteresis"] << [](pson& in){
+    hysteresis = in;
+};
+```
 
 ### Pasar datos múltiples
 
 El tipo de datos **pson** puede contener no solo diferentes tipos de datos, sino que también es totalmente compatible con documentos **JSON**. Entonces puede usar el tipo de datos pson para recibir múltiples valores al mismo tiempo. Este ejemplo recibirá dos floats diferentes que se almacenan con las llaves lat y lon.
 
-`thing["location"] << [](pson& in){`
-`    float lat = in["lat"];`
-`    float lon = in["lon"];`
-`};`
+```c
+thing["location"] << [](pson& in){
+    float lat = in["lat"];
+    float lon = in["lon"];
+};
+```
 
 ### Mostrar estado de recursos de entrada en Dashboards y API
 
@@ -66,25 +65,29 @@ Entonces, ¿cómo saben los Dashboards o la API cuál es el estado actual de un 
 
 Por lo tanto, una definición de recurso de entrada correcta que realmente permita mostrar el estado actual del recurso en un Dashboard o en la API será como este código de ejemplo.
 
-`thing["resource"] << [](pson& in){`
-`    if(in.is_empty()){`
-`        in = currentState;`
-`    }`
-`    else{`
-`        currentState = in;`
-`    }`
-`}`
+```c
+thing["resource"] << [](pson& in){
+    if(in.is_empty()){
+        in = currentState;
+    }
+    else{
+        currentState = in;
+    }
+}
+```
 
 Este código de ejemplo básicamente devuelve el estado actual (como un booleano, un número, etc.) si no hay control de entrada, o utiliza los datos entrantes para actualizar el estado actual. Esto se puede adaptar fácilmente para controlar un led, al tiempo que muestra su estado actual en el dashboard una vez abierto o actualizado.
 
-`thing["led"] << [](pson& in){`
-`    if(in.is_empty()){`
-`        in = (bool) digitalRead(pin);`
-`    }`
-`    else{`
-`        digitalWrite(pin, in ? HIGH : LOW);`
-`    }`
-`}`
+```c
+thing["led"] << [](pson& in){
+    if(in.is_empty()){
+        in = (bool) digitalRead(pin);
+    }
+    else{
+        digitalWrite(pin, in ? HIGH : LOW);
+    }
+}
+```
 
 Nota: para controlar un pin digital simplemente use el método explicado en la siguiente sección.
 
@@ -100,6 +103,14 @@ Este tipo de recursos permitirá definir un recurso para declarar un control sob
 
 Se requiere definir el pin digital como OUTPUT en su código de configuración, o el recurso no funcionará correctamente.
 
-`thing["relay"] << digitalPin(PIN_NUMBER);`
-`thing["relay"] << invertedDigitalPin(PIN_NUMBER);`
+```c
+thing["relay"] << digitalPin(PIN_NUMBER);
+thing["relay"] << invertedDigitalPin(PIN_NUMBER);
+```
+
+
+Toda esta información se encuentra disponible en la pagina de Thinger.io. 
+Yo tan sólo la he traducido para poder entenderla mejor.
+
+[Fuente de información de los recursos de entrada.](http://docs.thinger.io/arduino/#coding-adding-resources-input-resources)
 
