@@ -13,7 +13,9 @@ Uso de los recursos de entrada y salida de la plataforma open source iot Thinger
 
 ![Esquema proyecto](https://raw.githubusercontent.com/moisesfa/Proyectos_ESP8266/master/Semaforo/img/esquema.png)
 
-Vídeo de como se hizo en Youtube:
+## Así se hizo
+
+Vídeo de cómo se hizo en Youtube: 
 [Ver](https://youtu.be/BGTqYMGpnGo)
 
 ## Resultado
