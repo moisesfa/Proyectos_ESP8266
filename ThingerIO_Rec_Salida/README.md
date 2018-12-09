@@ -95,8 +95,8 @@ thing["resource"] = [](){
 ```
 
 
-Toda esta información se encuentra disponible en la pagina de Thinger.io. 
+Toda esta información se encuentra disponible en la pagina de Thinger.io.
 Yo tan sólo la he traducido para poder entenderla mejor.
 
-[Fuente de información de los recursos de entrada.](http://docs.thinger.io/arduino/#coding-adding-resources-output-resources)
+[Fuente de información de los recursos de salida.](http://docs.thinger.io/arduino/#coding-adding-resources-output-resources)
 
