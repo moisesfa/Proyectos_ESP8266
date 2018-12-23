@@ -14,6 +14,6 @@ Un ejemplo para empezar a trabajar con el sensor BME280 y mostrar los datos que 
 
 ## Licencia
 
-Este proyecto se presenta bajo [Creative Commons 0](https://creativecommons.org/publicdomain/zero/1.0/) (o dominio público para los amigos). 
+Este proyecto se presenta bajo [Creative Commons 0](https://creativecommons.org/publicdomain/zero/1.0/) (o dominio público en otras palabras). 
 
-Todo el código está bajo [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html).
+Todo el código está bajo [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html). (o garantizar a los usuarios finales (personas, organizaciones, compañías) la libertad de usar, estudiar, compartir (copiar) y modificar el software. Protegido de intentos de apropiación que restrinjan esas libertades a nuevos usuarios).
