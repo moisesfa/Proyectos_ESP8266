@@ -9,7 +9,7 @@ Control de los puertos digitales de un ESP8266 a traves de la plataforma iot Thi
 
 ## Esquema del proyecto
 
-![Esquema proyecto](https://raw.githubusercontent.com/moisesfa/Proyectos_ESP8266/master/BME280/img/esquema.png)
+![Esquema proyecto](https://raw.githubusercontent.com/moisesfa/Proyectos_ESP8266/master/ThingerIO_Rec_Entrada/Rec_Entrada_01/img/esquema.png)
 
 
 ## Licencia
