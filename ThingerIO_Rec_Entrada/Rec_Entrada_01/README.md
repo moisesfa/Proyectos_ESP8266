@@ -1,4 +1,4 @@
-# Ejemplo de comunicación con el sensor BME280
+# Recursos de entrada (1) Thinger.io.
 
 La placa de desarrollo utilizada es la Adafruit Feather HUZZAH con ESP8266.  
 Como IDE uso PlatformIO que es un ecosistema open source para desarrollos IoT.  
