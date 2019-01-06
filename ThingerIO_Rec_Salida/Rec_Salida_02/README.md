@@ -9,7 +9,7 @@ Sensor BME280 en modo sueño profundo, cada aproximadamente una hora se despiert
 
 ## Esquema del proyecto
 
-![Esquema proyecto](https://raw.githubusercontent.com/moisesfa/Proyectos_ESP8266/master/ThingerIO_Rec_Salida/Rec_Salida_02/img/esquema.png)
+![Esquema proyecto](https://raw.githubusercontent.com/moisesfa/Proyectos_ESP8266/master/ThingerIO_Rec_Salida/Rec_Salida_02/img/adafruit_deep_sleep.png)
 
 ## Notas del proyecto
 
