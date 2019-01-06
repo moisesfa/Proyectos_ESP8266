@@ -5,7 +5,12 @@ Como IDE uso PlatformIO que es un ecosistema open source para desarrollos IoT.
 
 ## Descripción del proyecto
 
-Sensor BME280 en modo sueño profundo, cada aproximadamente una hora se despierta envia datos a Thinger.io y los almacena en una base de datos.
+Placa de desarrollo en modo sueño profundo con el sensor BME280.  
+Cada aproximadamente 90 segundos se despierta, envía datos a Thinger.io y los almacena en una base de datos.
+Ese tiempo se puede modificar fácilmente.
+
+[Cómo se hizo](https://youtu.be/iqFjMDmAz28)
+
 
 ## Esquema del proyecto
 
