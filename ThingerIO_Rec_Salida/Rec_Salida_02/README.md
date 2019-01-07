@@ -20,11 +20,10 @@ Ese tiempo se puede modificar fácilmente.
 
 1. Hay algunos problemas de funcionamiento si se producen fluctuaciones en la alimentación inicial, se ha comprobado al conectar el polímetro con las pinzas para ver las medidas.
 
-2. Se puede poner esta instrucción al principio de todo el programa para ver el debug de la librería de Thinger.io.
+2. Se puede poner esta instrucción al principio de todo el programa para ver el debug de la librería de Thinger.io. Indica muchos detalles de como se lleva a cabo la conexión. 
 ```c
 #define _DEBUG_
 ```
-Indica muchos detalles de como se lleva a cabo la conexión. 
 
 3. Para la lectura de la batería: [Learn de Adafruit](https://learn.adafruit.com/using-ifttt-with-adafruit-io/wiring#battery-tracking)
 
