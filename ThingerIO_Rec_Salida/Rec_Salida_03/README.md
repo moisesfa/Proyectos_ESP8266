@@ -1,4 +1,4 @@
-# Recursos de salida BME280 (3) Thinger.io.
+# Recursos de salida TPL5110 Y BME280 (3) Thinger.io.
 
 La placa de desarrollo utilizada es la Adafruit Feather HUZZAH con ESP8266.  
 Como IDE uso PlatformIO que es un ecosistema open source para desarrollos IoT.  
@@ -13,7 +13,7 @@ Básicamente, el TPL se encenderá periódicamente, se podrá ajustar mediante u
 
 [Adafruit TPL5110 Low Power Timer Breakout](https://www.adafruit.com/product/3435)
 
-[Ejemplo de uso]()
+[Ejemplo de uso](https://youtu.be/EC_dg0ig2Fk)
 
 
 ## Esquema del proyecto
@@ -42,10 +42,10 @@ Como se puede ver, los consumos son muy bajos para un sistema que pretende alime
 Análisis de consumos:
 
 * El consumo del TPL5110 es unos 35 nA y el intervalo de tiempo de temporización es programable entre 100 ms y 7200 segundos.
-* No he conseguido ver ese consumo ya que no tengo equipos adecuados, pero lo que es seguro, es que es menor de 0μA.
-* Al transmitir alcanza unos 80 mA pero es tan rápido que no se puede apreciar bien el consumo.
+* No he conseguido ver ese consumo ya que no tengo equipos adecuados, pero es seguro que es menor de 0μA.
+* Al transmitir alcanza unos 80 mA.
 
-Considero este sistema muy eficiente. 
+Considero este sistema muy eficiente para aplicaciones de bajo consumo. 
 
 ## Licencia
 
