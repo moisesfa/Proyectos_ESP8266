@@ -94,6 +94,8 @@ void setup() {
 
 void loop() {
   
+  thing.handle();
+
   //Leer los datos del sensor cada Var_inter_medir, en este caso cada 10 segundos
   currentMillis = millis();
   if(currentMillis - previousMillis > interval) {
@@ -101,9 +103,8 @@ void loop() {
     interval=Var_inter_medir*1000;
     digitalWrite(PIN_LED, !digitalRead(PIN_LED));
     Leer_bme280();
+    thing.stream(thing["bme280"]);
   }
-  
-  thing.handle();
-  thing.stream(thing["bme280"]);
+     
   
 }
