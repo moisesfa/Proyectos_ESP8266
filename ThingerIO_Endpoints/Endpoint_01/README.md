@@ -11,6 +11,10 @@ Ejemplo de aviso mediante Email de que se ha alcanzado la temperatura establecid
 [Ejemplo de uso](https://youtu.be/EbV-xocjoMA)
 
 
+## Esquema del proyecto
+
+![Esquema proyecto](https://raw.githubusercontent.com/moisesfa/Proyectos_ESP8266/master/ThingerIO_Endpoints/Endpoint_01/img/esquema.png)
+
 
 ## Licencia
 
